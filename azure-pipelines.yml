@@ -25,3 +25,9 @@ steps:
     containerRegistry: 'cc'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+- task: Ansible@0
+  inputs:
+    ansibleInterface: 'remoteMachine'
+    connectionOverSsh: 'test'
+    playbookSourceRemoteMachine: 'ansibleMachine'
+    inventoriesRemoteMachine: 'noInventory'
