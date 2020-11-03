@@ -25,9 +25,9 @@ steps:
     containerRegistry: 'cc'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-- task: Ansible@0
+- task: TerraformTaskV1@0
   inputs:
-    ansibleInterface: 'remoteMachine'
-    connectionOverSsh: 'test'
-    playbookSourceRemoteMachine: 'ansibleMachine'
-    inventoriesRemoteMachine: 'noInventory'
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'testtt'
+    backendAzureRmResourceGroupName: 'test'
