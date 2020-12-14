@@ -25,9 +25,3 @@ steps:
     containerRegistry: 'cc'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-- task: TerraformTaskV1@0
-  inputs:
-    provider: 'azurerm'
-    command: 'init'
-    backendServiceArm: 'testtt'
-    backendAzureRmResourceGroupName: 'test'
