@@ -20,8 +20,3 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: Docker@2
-  inputs:
-    containerRegistry: 'cc'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
